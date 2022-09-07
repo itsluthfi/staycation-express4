@@ -1,13 +1,13 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
 
 const bookingSchema = new mongoose.Schema({
   bookingStartDate: {
-    type: date,
+    type: Date,
     required: true,
   },
   bookingEndDate: {
-    type: date,
+    type: Date,
     required: true,
   },
   itemId: [
