@@ -11,11 +11,12 @@
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
+        <%- include("../../partials/message.ejs") %>
         <!-- Page Heading -->
         <h1 class="h3 mb-4 text-gray-800">Bank</h1>
         <!-- End of Heading-->
         <!-- Tables -->
-        <%- include("bank_table") %>;
+        <%- include("bank_table.ejs") %>;
       </div>
       <!-- /.container-fluid -->
     </div>
@@ -67,4 +68,4 @@
   </div>
 </div>
 
-<%- include("../../partials/js.ejs") %>
+<%- include("add_modal.ejs") %> <%- include("../../partials/js.ejs") %>
