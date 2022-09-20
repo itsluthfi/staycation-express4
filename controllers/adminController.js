@@ -43,9 +43,9 @@ module.exports = {
 
   editCategory: async (req, res) => {
     try {
-      const { id, categoryName } = req.body;
+      const { id, name } = req.body;
       const category = await Category.findOne({ _id: id });
-      category.name = categoryName;
+      category.name = name;
       await category.save();
       req.flash("alertMessage", "Category successfully updated!");
       req.flash("alertStatus", "success");
