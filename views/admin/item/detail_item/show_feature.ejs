@@ -69,13 +69,16 @@
                   </td>
                   <td>
                     <form
-                      action="/admin/feature/<%= feature[i].id %>?_method=DELETE"
+                      action="/admin/item/<%= itemId %>/feature/<%= feature[i].id %>?_method=DELETE"
                       method="POST"
                     >
                       <a
                         href="javascript:void()"
                         type="button"
                         class="btn btn-warning btn-sm button-update"
+                        data-id="<%= feature[i].id %>"
+                        data-name="<%= feature[i].name %>"
+                        data-qty="<%= feature[i].qty %>"
                         ><i class="fas fa-edit"></i
                       ></a>
                       <button type="submit" class="btn btn-danger btn-sm">
