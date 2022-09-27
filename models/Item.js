@@ -12,7 +12,7 @@ const itemSchema = new mongoose.Schema({
   },
   sumBooking: {
     type: Number,
-    required: true,
+    default: 0,
   },
   country: {
     type: String,
