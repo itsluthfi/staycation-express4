@@ -10,6 +10,10 @@ const itemSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  sumBooking: {
+    type: Number,
+    required: true,
+  },
   country: {
     type: String,
     default: "Indonesia",
