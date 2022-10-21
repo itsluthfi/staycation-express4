@@ -66,4 +66,35 @@ module.exports = {
       res.status(500).json({ message: "Internal Server Error" });
     }
   },
+
+  detailPage: async (req, res) => {
+    try {
+      const { id } = req.params;
+      const item = await Item.findOne({ _id: id })
+        .populate({ path: "imageId", select: "_id imageUrl" })
+        .populate({ path: "featureId", select: "_id name qty imageUrl" })
+        .populate({ path: "activityId", select: "_id name type imageUrl" });
+
+      const bank = await Bank.find();
+
+      const testimonial = {
+        id: "asd1293uasdads1",
+        imageUrl: "images/testimonial1.jpg",
+        name: "Happy Customer",
+        rate: 4.55,
+        content:
+          "What a great trip with my family and I should try again next time...",
+        familyName: "Aslan",
+        familyOccupation: "Product Designer",
+      };
+
+      res.status(200).json({
+        ...item._doc,
+        bank,
+        testimonial,
+      });
+    } catch (error) {
+      res.status(500).json({ message: "Internal Server Error" });
+    }
+  },
 };
