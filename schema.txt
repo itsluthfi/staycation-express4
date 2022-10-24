@@ -24,7 +24,6 @@ feature:{
     imageUrl:string
 }
 
-
 activity:{
     name:string,
     type:string,
@@ -47,7 +46,6 @@ booking:{
     accountHolder:string,
     imageUrl:string,
     status:string
-
 }
 
 member:{
