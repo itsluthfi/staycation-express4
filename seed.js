@@ -3,7 +3,7 @@ var seeder = require("mongoose-seed");
 
 // Connect to MongoDB via Mongoose
 seeder.connect(
-  "mongodb://localhost:27017/db_staycation",
+  "mongodb+srv://luthfizh:bwamern@cluster0.zmk0eh5.mongodb.net/db_staycation?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -1032,9 +1032,9 @@ var data = [
         memberId: mongoose.Types.ObjectId("5e96cbe292b97300fc903333"),
         bankId: mongoose.Types.ObjectId("5e96cbe292b97300fc903323"),
         payments: {
-          proofPayment: "images/bukti.jpeg",
+          proofPayment: "images/buktibayar.jpeg",
           bankFrom: "BCA",
-          status: "Proses",
+          status: "Process",
           accountHolder: "ang",
         },
       },
@@ -1070,14 +1070,14 @@ var data = [
         nameBank: "Mandiri",
         nomorRekening: "089898",
         name: "Elfin",
-        imageUrl: "images/logo bca.png",
+        imageUrl: "images/logo mandiri.png",
       },
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc903323"),
         nameBank: "BCA",
         nomorRekening: "878678",
         name: "Elfin",
-        imageUrl: "images/logo mandiri.png",
+        imageUrl: "images/logo bca.png",
       },
     ],
   },
